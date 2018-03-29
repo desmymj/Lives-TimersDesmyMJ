@@ -144,7 +144,7 @@ local lives = 3
 local heart1
 local heart2
 
---*** ADD LOCAL VARIABLE FOR: INCORRECT OBJECT< POINTS OBJECT, POINTS
+--*** ADD LOCAL VARIABLE FOR: INCORRECT OBJECT < POINTS OBJECT, POINTS
 
 
 ---------------------------------------------------------------------------------------------
@@ -157,7 +157,7 @@ local function UpdateTime()
 	secondsLeft = secondsLeft - 1
 
 	--display the number of seconds left in the clock object
-	clockText.text = secondsLeft..""
+	clockText.text = secondsLeft .. ""
 
 	if (secondsLeft == 0 ) then
 		--reset the number of seconds left
@@ -166,12 +166,11 @@ local function UpdateTime()
 
 		-- *** IF THERE ARE NO LIVES LEFT, PlAY A LOSE SOUND, SHOW A YOU LOSE IMAGE
 		--AND CANCEL THE TIMER REMOVE THE THIRD HEART BY MAKING IT INVISIBLE
-		if (lives ==2) then
+		if (lives == 2) then
 			heart2.isVisible = false
 		elseif (lives == 1) then
 			heartisVisible = false
 		end
-
 		-- *** CALL THE FUNCTION TO ASK A NEW QUESTION
 
 	end
@@ -195,3 +194,11 @@ heart1.y = display.contentHeight * 1 / 7
 heart2 = display.newImageRect("Images/heart.png", 100, 100)
 heart2.x = display.contentWidth * 6 / 8
 heart2.y = display.contentHeight * 1 / 7
+
+heart3 = display.newImageRect("Images/heart.png", 100, 100)
+heart3.x = display.contentWidth * 5 / 8
+heart3.y = display.contentHeight * 1 / 7
+
+heart4 = display.newImageRect("Images/heart.png", 100, 100)
+heart4.x = display.contentWidth * 4 / 8
+heart4.y = display.contentHeight * 1 / 7
